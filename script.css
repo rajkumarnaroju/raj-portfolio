@@ -1,0 +1,11 @@
+const levels = document.querySelectorAll(".level");
+
+window.addEventListener("scroll", () => {
+  levels.forEach(level => {
+    const rect = level.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      level.style.opacity = "1";
+      level.style.transform = "scale(1)";
+    }
+  });
+});
